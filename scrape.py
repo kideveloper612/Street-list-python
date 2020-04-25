@@ -25,7 +25,7 @@ def write_csv(lines, filename):
 def main():
     count = 0
     for page in range(1804):
-        url = 'https://www.locatefamily.com/Street-Lists/Singapore/index-{}.html'.format(str(page + 1))
+        url = 'https://www.locatefamily.com/Street-Lists/United-States-of-America/index-{}.html'.format(str(page + 1))
         print(url)
         res = requests.request(method='GET', url=url).text
         soup = BeautifulSoup(res, 'html5lib')
@@ -43,7 +43,7 @@ def main():
             if phone_d:
                 phone = phone_d.text.strip()
             line = [address, name, phone]
-            write_csv(lines=[line], filename='Singapore.csv')
+            write_csv(lines=[line], filename='USA.csv')
             print(count, line)
             count += 1
 
