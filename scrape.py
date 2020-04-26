@@ -4,7 +4,7 @@ import os
 import csv
 
 
-csv_header = [['NAME', 'ADDRESS', 'PHONE']]
+csv_header = [['ADDRESS', 'NAME', 'PHONE']]
 
 
 def write_direct_csv(lines, filename):
