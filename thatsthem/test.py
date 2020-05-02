@@ -1,8 +1,11 @@
 import requests
-url = 'https://httpbin.org/ip'
-proxies = {
-    "http": 'http://109.111.171.49:3128',
-    "https": 'https://109.111.171.49:3128'
+http_proxy = "http://kideveloper612:{API_KEY}@proxy.packetstream.io:31112"
+https_proxy = "http://kideveloper612:{API_KEY}@proxy.packetstream.io:31112"
+url = "https://ifconfig.co/json"
+
+proxyDict = {
+"http" : http_proxy,
+"https" : https_proxy,
 }
-response = requests.get(url, proxies=proxies)
-print(response.json())
+
+r = requests.get(url, proxies=proxyDict)

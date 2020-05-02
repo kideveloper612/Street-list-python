@@ -68,23 +68,23 @@ def check_ip(rand):
         print('This is response url: ', response.text.strip())
         return proxy
     except ConnectionError as e:
-        print(e.strerror, e.errno, 'Trying another proxy')
+        print(e, 'Trying another proxy')
         return None
 
 
 def request(number):
     # proxies = get_proxies()
-    while True:
-        # rand = random.choice(proxies)
-        check = check_ip('109.111.171.49:3128')
-        print('here: ', check)
-        if check is not None:
-            break
+    # while True:
+    #     rand = random.choice(proxies)
+    #     check = check_ip('176.110.154.59:53499')
+    #     print('here: ', check)
+    #     if check is not None:
+    #         break
     name, address, ip, income, occupation, age = '', '', '', '', '', ''
     results = []
     req_number = '{}-{}-{}'.format(number[1:4], number[4:7], number[7:11])
     url = 'https://thatsthem.com/phone/{}'.format(req_number)
-    response = requests.get(url=url, proxies=check)
+    response = requests.get(url=url)
     if response.url == 'https://thatsthem.com/?rl=true':
         print('Proxy Terminated')
         exit()
