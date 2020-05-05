@@ -1,7 +1,10 @@
 import os
 import csv
 
-directory = 'output'
+# directory = 'F:\\working\\python\\scrapping\\Location_Marco\\result\\DELIVERY_EB_1_05'
+directory = 'F:\\working\\python\\scrapping\\Location_Marco\\thatsthem\\4_DAYS\\1M_1'
+# directory = 'F:\\working\\python\\scrapping\\Location_Marco\\thatsthem\\output'
+
 total = []
 available = []
 
@@ -33,10 +36,17 @@ for file in os.listdir(directory):
             total.extend(each_result)
     else:
         path = os.path.join(directory, file)
+        print(path)
         with open(file=path, encoding='utf-8') as reader:
-            each_result = list(csv.reader(reader))[1:]
-            available.extend(each_result)
+            try:
+                each_result = list(csv.reader(reader))[1:]
+                # for e in each_result:
+                    # if e not in available:
+                        # available.append(each_result)
+                available.extend(each_result)
+            except:
+                continue
 
 print('Total: ', len(total))
 print('Available: ', len(available))
-# write_csv(lines=total, filename='Total.csv')
+write_csv(lines=available, filename='DELIVERY.csv')

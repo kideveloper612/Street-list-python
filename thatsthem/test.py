@@ -1,11 +1,10 @@
-import requests
-http_proxy = "http://kideveloper612:{API_KEY}@proxy.packetstream.io:31112"
-https_proxy = "http://kideveloper612:{API_KEY}@proxy.packetstream.io:31112"
-url = "https://ifconfig.co/json"
+print("# Create new threads")
+for i in range(500):
+    print("thread{} = myThread({}, thread_number_list[{}], 'DELIVERY.csv')".format(i+1, i+1, i))
+print("# Start new Threads")
+for i in range(500):
+    print("thread{}.start()".format(i+1))
 
-proxyDict = {
-"http" : http_proxy,
-"https" : https_proxy,
-}
-
-r = requests.get(url, proxies=proxyDict)
+print("# Add threads to thread list")
+for i in range(500):
+    print("threads.append(thread{})".format(i+1))
