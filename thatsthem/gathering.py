@@ -2,7 +2,7 @@ import os
 import csv
 
 # directory = 'F:\\working\\python\\scrapping\\Location_Marco\\result\\DELIVERY_EB_1_05'
-directory = 'F:\\working\\python\\scrapping\\Location_Marco\\thatsthem\\4_DAYS\\1M_1'
+directory = 'F:\\working\\python\\scrapping\\Location_Marco\\Newly\\77k\\77k'
 # directory = 'F:\\working\\python\\scrapping\\Location_Marco\\thatsthem\\output'
 
 total = []
