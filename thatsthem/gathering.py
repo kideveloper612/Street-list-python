@@ -2,7 +2,7 @@ import os
 import csv
 
 # directory = 'F:\\working\\python\\scrapping\\Location_Marco\\result\\DELIVERY_EB_1_05'
-directory = 'F:\\working\\python\\scrapping\\Location_Marco\\Newly\\77k\\77k'
+directory = 'F:\\working\\python\\scrapping\\Location_Marco\\Newly\\TOSCB_1M_2\\M1_2'
 # directory = 'F:\\working\\python\\scrapping\\Location_Marco\\thatsthem\\output'
 
 total = []
@@ -49,4 +49,4 @@ for file in os.listdir(directory):
 
 print('Total: ', len(total))
 print('Available: ', len(available))
-write_csv(lines=available, filename='DELIVERY.csv')
+# write_csv(lines=available, filename='TOSCB_1M_1.csv')
