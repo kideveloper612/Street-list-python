@@ -1,6 +1,6 @@
 print("# Create new threads")
 for i in range(5000):
-    print("thread{} = myThread({}, thread_number_list[{}], 'DELIVERY.csv')".format(i+1, i+1, i))
+    print("thread{} = myThread({}, thread_number_list[{}])".format(i+1, i+1, i))
 print("# Start new Threads")
 for i in range(5000):
     print("thread{}.start()".format(i+1))
